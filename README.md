@@ -1,6 +1,4 @@
 # acptForm_useTheBordApi Private
-AAS_管理部用サイト
-
 請求書作成・見積書 ツール「board」のapiを利用した、検収証記入フォームの管理サイト。
 
 https://the-board.jp/
