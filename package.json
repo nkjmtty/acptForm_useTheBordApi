@@ -1,0 +1,42 @@
+{
+    "name": "acptForm_useTheBordApi",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "N_Tetsuya",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "start": "npm-run-all -p serve watch",
+        "restart": "",
+        "stop": "",
+        "test": "",
+
+        "serve": "php artisan serve",
+        "typescript": "tsc -p ./config/typescript.config.json",
+
+
+        "postcss": "postcss resources/**/[!_]*.css --base ./resources/ --dir public --config ./config/postcss.config.js",
+        "postcss:development": "cross-env NODE_ENV=development npm run postcss --",
+        "postcss:production":  "cross-env NODE_ENV=production npm run postcss -- --no-map",
+
+        "watch": "npm run watch:css watch:js",
+        "watch:css": "npm run postcss:development -- --watch",
+        "watch:js": "npm run typescript -- --watch"
+    },
+    "devDependencies": {
+        "autoprefixer": "^9.4.7",
+        "cross-env": "^5.2.0",
+        "css-mqpacker": "^7.0.0",
+        "cssnano": "^4.1.9",
+        "postcss-calc": "^7.0.1",
+        "postcss-cli": "^6.1.1",
+        "postcss-color-function": "^4.0.1",
+        "postcss-custom-media": "^7.0.7",
+        "postcss-custom-properties": "^8.0.9",
+        "postcss-discard-comments": "^4.0.2",
+        "postcss-import": "^12.0.1",
+        "postcss-nesting": "^7.0.0",
+        "postcss-selector-matches": "^4.0.0",
+        "typescript": "^3.3.3"
+    }
+}
